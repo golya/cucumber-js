@@ -448,7 +448,7 @@ If a lifecycle hook throws an error, it is output to `stderr`, and the process i
 
 ### CLI
 
-Cucumber.js includes a binary file to execute the features.
+Cucumber.js includes a executable file to run the features.
 
 If you installed Cucumber.js globally, you may run it with:
 
@@ -456,7 +456,7 @@ If you installed Cucumber.js globally, you may run it with:
 $ cucumber.js
 ```
 
-If you installed Cucumber locally, you may need to specify the path to the binary:
+If you installed Cucumber locally, you may need to specify the path to the executable:
 
 ``` shell
 $ ./node_modules/.bin/cucumber.js
@@ -502,8 +502,8 @@ Built-in formatters
 
 Use `--tags <EXPRESSION>` to run specific features or scenarios.
 
-* `--tag @dev`: tagged with @dev
-* `--tag ~@dev`: NOT tagged with `@dev`
+* `--tags @dev`: tagged with @dev
+* `--tags ~@dev`: NOT tagged with `@dev`
 * `--tags @foo,@bar`: tagged with `@foo` OR `bar`
 * `--tags @foo --tags @bar`: tagged with `@foo` AND `bar`
 
