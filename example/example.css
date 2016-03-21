@@ -1,33 +1,64 @@
-html, body {
-  margin:1em;
-  min-height:100%;
-  font-family:helvetica, arial, freesans, clean, sans-serif;
-  font-size:.95em;
+img.cucumber-logo {
+  height: 100px;
+  position: relative;
+  left: -26px;
 }
 
-#feature, #step-definitions, #output, #errors {
-  font-family:'Bitstream Vera Sans Mono', Courier, monospace;
-  font-size:1em;
+img.github-logo {
+  height: 50px;
+  position: relative;
+  top: 25px;
 }
 
-#feature, #step-definitions, #errors {
-  width:700px;
+.header {
+  position: absolute;
+  top: 0;
+  height: 85px;
+  left: 45px;
+  right: 45px;
 }
 
-#feature {
-  height:16em;
+.main {
+  position: absolute;
+  top: 100px;
+  bottom: 100px;
+  left: 30px;
+  right: 30px;
 }
 
-#step-definitions {
-  height:28em;
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 85px;
+  left: 45px;
+  right: 45px;
 }
 
-#output {
-  width: 100%;
+.main > * {
+  height: 100%;
+  position: relative;
 }
 
-#errors {
-  color: #a30;
+#feature, #step-definitions {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 15px;
+  right: 15px;
+  border: 1px solid #ccc;
+}
+
+.footer {
+  text-align: center;
+}
+
+#run-feature {
+  background-color: #00A818;
+  color: white;
+}
+
+#run-feature:hover {
+  background-color: #39B54A;
 }
 
 /* html formatter */

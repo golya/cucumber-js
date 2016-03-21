@@ -65,13 +65,15 @@
     return self;
   };
 
+  var featureEditor, stepDefinitionsEditor;
+
   function runFeature() {
     var supportCode;
     var output          = $('#output');
     var errors          = $('#errors');
     var errorsContainer = $('#errors-container');
-    var featureSource   = $('#feature').val();
-    eval('supportCode   = function() {' + $('#step-definitions').val() + '};');
+    var featureSource   = featureEditor.getValue()
+    eval('supportCode   = function() {' + stepDefinitionsEditor.getValue() + '};');
     var cucumber        = Cucumber(featureSource, supportCode);
     var $output         = $('#output');
     $output.empty();
@@ -94,5 +96,11 @@
   $(function() {
     $('#run-feature').click(runFeature);
     $('#errors-container').hide();
+
+    featureEditor = ace.edit("feature");
+    featureEditor.getSession().setMode("ace/mode/gherkin");
+
+    stepDefinitionsEditor = ace.edit("step-definitions");
+    stepDefinitionsEditor.getSession().setMode("ace/mode/javascript");
   });
 })(jQuery);
